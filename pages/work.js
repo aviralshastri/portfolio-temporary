@@ -9,13 +9,11 @@ const Work = () => {
       description: "A project description goes here. Briefly describe the ChatBot using NLP.",
       githubLink: "https://github.com/yourusername/chatbot-nlp",
     },
-    // Add more projects as needed
   ];
 
   return (
     <Page>
       <h1 className="text-8xl font-bold mt-8 mb-8 text-center">Work</h1>
-
       <div className="flex justify-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
@@ -23,7 +21,7 @@ const Work = () => {
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex">
                 <div className="w-1/2">
                   <Image
-                    src={project.image}
+                    src={'/projectChatbot.png'}
                     alt={`Project ${index}`}
                     width={500}
                     height={300}
