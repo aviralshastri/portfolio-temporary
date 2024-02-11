@@ -5,7 +5,7 @@ const Work = () => {
   const projects = [
     {
       title: "ChatBot using NLP",
-      image: "/projectChatbot.png",
+      image: "https://drive.google.com/file/d/1gRywQ8zdsFJCccZWf_Nnv_hGca9SnoOI/view?usp=sharing",
       description: "A project description goes here. Briefly describe the ChatBot using NLP.",
       githubLink: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
     },
