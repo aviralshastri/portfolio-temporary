@@ -5,9 +5,17 @@ const Work = () => {
   const projectsSoftwareDev = [
     {
       title: "ChatBot using NLP",
-      image: "/projectChatbot.png",
+      image: "/software dev/projectChatbot.jpg",
       description: "A project description goes here. Briefly describe the ChatBot using NLP.",
-      githubLink: "https://github.com/yourusername/chatbot-nlp",
+      githubLink: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
+      buttonName:"View on GitHub"
+    },
+    {
+      title: "Portfolio Website",
+      image: "/softwaredev/projectPortfolio.png",
+      description: "Introducing my comprehensive portfolio, meticulously crafted using the powerful Next.js framework, Tailwind CSS for a refined design system, and Framer Motion to infuse dynamic animations. This triad of technologies ensures not only a highly functional and responsive web application but also a visually stunning and interactive showcase of my skills and projects. The Next.js framework brings efficiency and speed to the forefront, Tailwind CSS facilitates a sleek and modern design aesthetic, while Framer Motion elevates the overall user experience with smooth and captivating animations. From seamless navigation to captivating transitions, my portfolio embodies the synergy of cutting-edge web development, offering visitors an immersive journey through my professional endeavors and capabilities.",
+      githubLink: "https://github.com/aviralshastri/portfolio-temporary.git",
+      buttonName:"View on GitHub"
     },
   ];
   const projectsVideoEditing = [
