@@ -15,7 +15,7 @@ const Work = () => {
       title: "Video Editing Project",
       image: "/videoediting/EditingInternship.png",
       description: "As a video editing intern at Vaayu Robotics, I leveraged my skills in Premiere Pro and After Effects to produce high-quality and visually captivating content. Through the seamless integration of these powerful tools, I enhanced video narratives with polished effects, dynamic transitions, and professional-grade editing techniques. This internship not only honed my proficiency in industry-standard software but also allowed me to contribute creatively to the production of compelling and impactful video content for Vaayu Robotics.",
-      instagramLink: "/links", // Updated the property name
+      instagramLink: "/links",
       buttonName: "View Work",
     },
   ];
