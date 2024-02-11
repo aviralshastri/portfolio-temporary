@@ -5,7 +5,7 @@ const Work = () => {
   const projects = [
     {
       title: "ChatBot using NLP",
-      image: "https://drive.google.com/file/d/1gRywQ8zdsFJCccZWf_Nnv_hGca9SnoOI/view?usp=sharing",
+      image: '/projectChatbot.png',
       description: "A project description goes here. Briefly describe the ChatBot using NLP.",
       githubLink: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
     },
@@ -21,8 +21,8 @@ const Work = () => {
               <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="flex">
                 <div className="w-1/2">
                   <Image
-                    src={'/projectChatbot.png'}
-                    alt={`Project ${index}`}
+                    src={project.image}
+                    alt={project.title}
                     width={500}
                     height={300}
                     className="w-full h-48 object-cover rounded-md"
