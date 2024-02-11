@@ -6,7 +6,7 @@ const Work = () => {
     {
       title: "ChatBot using NLP",
       image: "/softwaredev/projectChatbot.jpg",
-      description: "A project description goes here. Briefly describe the ChatBot using NLP.",
+      description: "Crafted a Python chatbot that not only harnesses the power of NLTK for robust natural language processing but also incorporates Flet for a visually appealing graphical user interface. This chatbot stands out by injecting a touch of humor into its responses, making interactions not only informative but also delightful. Users can engage in witty conversations, creating a unique and enjoyable experience with the blend of NLP sophistication and a whimsical sense of humor.",
       githubLink: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
       buttonName:"View on GitHub"
     },
