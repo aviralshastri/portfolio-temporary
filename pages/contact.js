@@ -22,7 +22,6 @@ const Contact = () => {
   e.preventDefault();
 
   const { name, mobile, email, description } = formData;
-  // Validate that the email is not empty and follows a basic format
   if (!email || !/\S+@\S+\.\S+/.test(email)) {
     alert('Please enter a valid email address');
     return;

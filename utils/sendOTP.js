@@ -1,13 +1,7 @@
 import nodemailer from 'nodemailer';
 
 async function sendOTP(subject, text, to) {
-  var toPerson="";
-  if (to === "none"){
-    toPerson==process.env.MailReceiver
-  }
-  else{
-    toPerson==to;
-  }
+
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
