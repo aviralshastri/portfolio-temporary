@@ -5,11 +5,12 @@ async function sendOTP(subject, text, to) {
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
-    auth: {
-      user: process.env.MailID,
-      pass: process.env.MailPassword,
-    },
-  });
+  auth: {
+    user: process.env.MailID,
+    pass: process.env.MailPassword,
+  },
+  authMethod: process.env.AuthMethod, 
+});
 
   const mailOptions = {
     from: process.env.MailID,
