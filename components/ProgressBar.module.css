@@ -1,0 +1,11 @@
+@media only screen and (max-width: 767px) {
+  .progressbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: rgb(19, 18, 18);
+    transform-origin: 0%;
+  }
+}

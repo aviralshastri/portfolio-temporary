@@ -1,11 +1,12 @@
-import { useState } from 'react';
+// Header.jsx
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import styles from './Header.Module.css';
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const router = useRouter();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -15,6 +16,18 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      closeMenu();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <header className="bg-white shadow-lg flex">
       <div className="container mx-auto flex items-center justify-between p-4">
@@ -22,90 +35,51 @@ const Header = () => {
           className="lg:hidden text-gray-800 focus:outline-none transition-transform duration-300 ease-in-out transform"
           onClick={toggleMenu}
         >
-          <svg
-            className={`w-6 h-6 ${isMenuOpen ? 'hidden' : 'block'}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-          <svg
-            className={`w-6 h-6 ${isMenuOpen ? 'block' : 'hidden'}`}
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          <div className={styles.container}>
+            <div className={`hamburger-container ${isMenuOpen ? 'change' : ''}`}>
+              <div className="bar"></div>
+              <div className="bar"></div>
+              <div className="bar"></div>
+            </div>
+          </div>
         </button>
 
         <nav
           className={`lg:flex lg:items-center ${
             isMenuOpen
-              ? 'fixed top-0 right-0 h-screen w-64 bg-white z-50 overflow-y-auto transition-transform duration-300 ease-in-out transform'
-              : 'hidden'
+              ? 'fixed top-0 right-0 h-screen w-64 bg-white z-50 overflow-y-auto transition-transform duration-300 ease-in-out transform translate-x-0'
+              : 'hidden lg:block'
           }`}
         >
           <div className="lg:flex items-center">
             <Link href={'/'} passHref>
               <div
-                className={`font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200 ${
-                  router.pathname === '/' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  toggleMenu();
-                  if (router.pathname === '/') {
-                    closeMenu();
-                  }
-                }}
+                onClick={closeMenu}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
               >
                 HOME
               </div>
             </Link>
             <Link href={'/about'} passHref>
               <div
-                className={`font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200 ${
-                  router.pathname === '/about' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  toggleMenu();
-                  if (router.pathname === '/about') {
-                    closeMenu();
-                  }
-                }}
+                onClick={closeMenu}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
               >
                 ABOUT
               </div>
             </Link>
             <Link href={'/work'} passHref>
               <div
-                className={`font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200 ${
-                  router.pathname === '/work' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  toggleMenu();
-                  if (router.pathname === '/work') {
-                    closeMenu();
-                  }
-                }}
+                onClick={closeMenu}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
               >
                 WORK
               </div>
             </Link>
             <Link href={'/contact'} passHref>
               <div
-                className={`font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200 ${
-                  router.pathname === '/contact' ? 'active' : ''
-                }`}
-                onClick={() => {
-                  toggleMenu();
-                  if (router.pathname === '/contact') {
-                    closeMenu();
-                  }
-                }}
+                onClick={closeMenu}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
               >
                 CONTACT
               </div>

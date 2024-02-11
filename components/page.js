@@ -1,11 +1,14 @@
 import Footer from "./Footer";
 import Header from "./header";
-import { easeIn, easeInOut, easeOut, motion } from 'framer-motion';
-export default function Page({ children }) {
+import { easeInOut, motion } from 'framer-motion';
+import ProgressBar from "./progressBar";
 
+export default function Page({ children }) {
+    
     return (
-        <div>
+        <>
             <Header />
+            <ProgressBar/>
             <motion.main initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
@@ -13,6 +16,6 @@ export default function Page({ children }) {
                 {children}
                 <Footer />
             </motion.main>
-        </div>
+        </>
     )
 }

@@ -8,6 +8,45 @@
     color: #000;
     position: relative;
 }
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
 
 .nav-item::before {
     content: '';
@@ -44,6 +83,7 @@
   width: 100%;
 }
 
+
 .me {
     overflow: hidden;
     animation: animate 5s ease-in-out infinite;
@@ -65,14 +105,11 @@
     }
 }
 
-@font-face {font-family: ethnocentric; src: url("ethnocentric\ rg.otf")!important;}
-
-
+.not-found{
+  color: #222222 !important;
+}
 
 .homeText:hover{
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: #000000;
-  -webkit-text-stroke-width: 2px;
   cursor:url('../public/TextCursor.png')10 3, auto;
 }
 @media only screen and (max-width: 767px) {
@@ -86,5 +123,17 @@
   .homeText{
     text-align: justify;
   }
+  .notF{
+    font-size: 1.5em;
+  }
 
 }
+
+@media only screen and (min-width: 768px) {
+  .socials{
+    transform: translateY(0px);
+    transition: 0.2s ease-out;
+  }
+  .socials:hover{
+  transform: translateY(-5px);
+  }}
