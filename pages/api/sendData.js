@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   const { text } = req.body;
 
   try {
-    const docRef= await addDoc(collection(db,process.env.CollectionName),{Data:text});
+    const docRef= await addDoc(collection(db,process.env.CollectionName.toString()),{Data:text});
     res.status(200).json({ success: true });
   } catch (error) {
     console.error('Error sending data: ', error);

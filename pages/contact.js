@@ -11,7 +11,7 @@ const Contact = () => {
   });
 
   const [submissionCount, setSubmissionCount] = useState(0);
-
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
   useEffect(() => {
     const storedSubmissionCount = cookie.get('submissionCount');
     if (storedSubmissionCount) {
@@ -29,16 +29,17 @@ const Contact = () => {
 
   const handleSubmit =async (e) => {
     e.preventDefault();
+    
     const { name, mobile, email, description } = formData;
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       alert('Please enter a valid email address');
       return;
     }
     if (submissionCount < 3) {
-
+      setButtonDisabled(true);
       try {
         const emailText = `Name: ${name}, Mobile: ${mobile}, Email: ${email}, Description: ${description}`;
-
+        
         await fetch('/api/sendData', {
           method: 'POST',
           headers: {
@@ -53,11 +54,12 @@ const Contact = () => {
       } catch (error) {
         console.error('Error sending email: ', error);
         alert('Error sending email. Please try again later.');
-        return;
+        
       }
+      
       setSubmissionCount(submissionCount + 1);
-
-      cookie.set('submissionCount', submissionCount + 1, { expires: 1 }); // Expires in 1 day
+      setButtonDisabled(false);
+      cookie.set('submissionCount', submissionCount + 1, { expires: 1 });
     } else {
       alert('Sorry, you have exceeded the submission limit for today. Please try again tomorrow.');
     }
