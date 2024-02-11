@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import cookie from 'js-cookie';
 import Page from '@/components/page';
 
 const Contact = () => {
@@ -8,7 +9,15 @@ const Contact = () => {
     email: '',
     description: '',
   });
-  const [OTP, setOTP]=useState('000000')
+
+  const [submissionCount, setSubmissionCount] = useState(0);
+
+  useEffect(() => {
+    const storedSubmissionCount = cookie.get('submissionCount');
+    if (storedSubmissionCount) {
+      setSubmissionCount(parseInt(storedSubmissionCount, 10));
+    }
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,79 +27,42 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const { name, mobile, email, description } = formData;
-  if (!email || !/\S+@\S+\.\S+/.test(email)) {
-    alert('Please enter a valid email address');
-    return;
-  }
-
-  try {
-    const response = await fetch('/api/sendOTP', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        to: email,
-      }),
-    });
-
-    const responseData = await response.json();
-
-    if (responseData.success) {
-      alert('OTP sent successfully!');
-      while (true){
-        const inputOTP = window.prompt("Enter OTP:", "");
-        if (inputOTP===responseData.otp){
-          MailSender(name,mobile,description,email);
-          break;
-        }
-        else{
-          const retry=window.confirm("Do you want to re-try entering OTP ?");
-          if (retry){
-            continue;
-          }
-          else{
-            alert("E-Mail was not sent.")
-            break;
-          }
-        }
-      }
-      
-    } else {
-      alert('Error sending OTP. Please try again later.');
+  const handleSubmit =async (e) => {
+    e.preventDefault();
+    const { name, mobile, email, description } = formData;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      alert('Please enter a valid email address');
+      return;
     }
-  } catch (error) {
-    console.error('Error sending OTP: ', error);
-    alert('Error sending OTP. Please try again later.');
-  }
-};
-  const MailSender = async (name,mobile,description,email) => {  
-    try {
-      const emailText = `Name: ${name}\nMobile: ${mobile}\nEmail: ${email}\nDescription: ${description}`;
-  
-      await fetch('/api/sendEmail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          subject: 'Enquiry from portfolio',
-          text: emailText,
-        }),
-      });
-  
-      alert('Email sent successfully!');
-    } catch (error) {
-      console.error('Error sending email: ', error);
-      alert('Error sending email. Please try again later.');
+    if (submissionCount < 3) {
+
+      try {
+        const emailText = `Name: ${name}, Mobile: ${mobile}, Email: ${email}, Description: ${description}`;
+
+        await fetch('/api/sendData', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            text: emailText,
+          }),
+        });
+
+        alert('Data sent successfully!');
+      } catch (error) {
+        console.error('Error sending email: ', error);
+        alert('Error sending email. Please try again later.');
+        return;
+      }
+      setSubmissionCount(submissionCount + 1);
+
+      cookie.set('submissionCount', submissionCount + 1, { expires: 1 }); // Expires in 1 day
+    } else {
+      alert('Sorry, you have exceeded the submission limit for today. Please try again tomorrow.');
     }
   };
-  
-  
+
 
   return (
     <Page>
