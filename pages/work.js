@@ -33,10 +33,10 @@ const Work = () => {
       <h1 className="text-4xl font-bold mt-8 mb-8 text-center">Work</h1>
 
       <div className="text-2xl font-bold mb-4 text-center">Software Development</div>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center workImg">
         {projectsSoftwareDev.map((project, index) => (
           <div key={index} className="max-w-md mx-4 mb-8 bg-white rounded-md overflow-hidden shadow-2xl">
-            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto workImg mt-8" objectFit="cover" />
+            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto mt-8" objectFit="cover" />
             <div className="p-4">
               <h2 className="text-2xl font-bold mb-2 text-center">{project.title}</h2>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
@@ -53,10 +53,10 @@ const Work = () => {
       <div className="my-8" />
 
       <div className="text-2xl font-bold mb-4 text-center">Video Editing</div>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center workImg">
         {projectsVideoEditing.map((project, index) => (
           <div key={index} className="max-w-md mx-4 mb-8 bg-white rounded-md overflow-hidden shadow-2xl">
-            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto workImg" objectFit="cover" />
+            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto" objectFit="cover" />
             <div className="p-4">
               <h1 className="text-2xl font-bold mb-2 text-center">{project.title}</h1>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
