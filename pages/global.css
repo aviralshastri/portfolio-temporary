@@ -136,4 +136,12 @@ header {
   }
   .socials:hover{
   transform: translateY(-5px);
-  }}
+  }
+  .workImg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.workImg:hover {
+  transform: scale(1.1);
+}
+}
