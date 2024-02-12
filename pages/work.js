@@ -36,7 +36,7 @@ const Work = () => {
       <div className="flex flex-wrap justify-center">
         {projectsSoftwareDev.map((project, index) => (
           <div key={index} className="max-w-md mx-4 mb-8 bg-white rounded-md overflow-hidden shadow-2xl">
-            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto mt-8" objectFit="cover" />
+            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto workImg mt-8" objectFit="cover" />
             <div className="p-4">
               <h2 className="text-2xl font-bold mb-2 text-center">{project.title}</h2>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
@@ -56,7 +56,7 @@ const Work = () => {
       <div className="flex flex-wrap justify-center">
         {projectsVideoEditing.map((project, index) => (
           <div key={index} className="max-w-md mx-4 mb-8 bg-white rounded-md overflow-hidden shadow-2xl">
-            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto" objectFit="cover" />
+            <Image src={project.image} alt={project.title} width={300} height={200} className="mx-auto workImg" objectFit="cover" />
             <div className="p-4">
               <h1 className="text-2xl font-bold mb-2 text-center">{project.title}</h1>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
