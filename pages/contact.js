@@ -27,19 +27,32 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit =async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     const { name, mobile, email, description } = formData;
+
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       alert('Please enter a valid email address');
       return;
     }
+
+    if (!name || /\d/.test(name)) {
+      alert('Please enter a valid name.');
+      return;
+    }
+
+    if (!mobile || /[a-zA-Z]/.test(mobile)) {
+      alert('Please enter a valid mobile number.');
+      return;
+    }
+
     if (submissionCount < 3) {
       setButtonDisabled(true);
+
       try {
         const emailText = `Name: ${name}, Mobile: ${mobile}, Email: ${email}, Description: ${description}`;
-        
+
         await fetch('/api/sendData', {
           method: 'POST',
           headers: {
@@ -54,9 +67,8 @@ const Contact = () => {
       } catch (error) {
         console.error('Error sending email: ', error);
         alert('Error sending email. Please try again later.');
-        
       }
-      
+
       setSubmissionCount(submissionCount + 1);
       setButtonDisabled(false);
       cookie.set('submissionCount', submissionCount + 1, { expires: 1 });
@@ -64,6 +76,7 @@ const Contact = () => {
       alert('Sorry, you have exceeded the submission limit for today. Please try again tomorrow.');
     }
   };
+
 
 
   return (
