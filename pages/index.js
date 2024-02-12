@@ -19,26 +19,18 @@ export default function Home() {
                             Welcome to my personal website. Feel free to explore!
                         </p>
                         <div className="flex items-center mt-4 space-x-4 social">
-
                                 <a className="hover:opacity-80 socials" href="https://x.com/AviralShastri?t=YlyiZv2oekkVLiQN3JvOxQ&s=09">
                                     <Image src="/twitter.png" alt="Twitter" width={60} height={60} />
                                 </a>
-
-
                                 <a className="hover:opacity-80 socials" href="https://github.com/aviralshastri">
                                     <Image src="/github.png" alt="GitHub" width={45} height={45} />
                                 </a>
-
-
                                 <a className="hover:opacity-80 socials" href="https://www.instagram.com/wateproofhelicopter?igsh=MXA0bTQwMGRvMXIwcA==">
                                     <Image src="/instagram.png" alt="Instagram" width={45} height={45} />
                                 </a>
-
-
                                 <a className="hover:opacity-80 socials" href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQGjUhnQOvUjhgAAAY2T595YbonfC2u0pohFvnf-MOR0aeqq-XTX2W1v13JThSlGPBCzulMyfClis36kF5TEhdWLrK81BulTapHFIWP744WMIAawJtZp2iCJfjK-kgHxM4NriKQ=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Faviral-shastri-104944270%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app">
                                     <Image src="/linkedin.png" alt="LinkedIn" width={40} height={40} />
                                 </a>
-
                         </div>
                     </div>
                 </div>

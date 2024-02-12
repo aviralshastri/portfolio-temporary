@@ -1,4 +1,4 @@
-/* styles.css */
+
 
 .hamburger-container {
   cursor: pointer;
@@ -7,16 +7,18 @@
   align-items: center;
 }
 
+.logo{filter: grayscale(100%);}
+
 .bar {
   width: 30px;
-  height: 3px;
+  height: 2px;
   background-color: #333;
-  margin: 6px 0;
+  margin: 5px 0;
   transition: 0.4s;
 }
 
 .change .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 16px);
+  transform: rotate(-45deg) translate(-5px, 12px);
 }
 
 .change .bar:nth-child(2) {
@@ -24,7 +26,7 @@
 }
 
 .change .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -19px);
+  transform: rotate(45deg) translate(-5px, -15px);
 }
 
 .overlay {

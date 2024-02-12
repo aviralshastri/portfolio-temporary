@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import Header from "./header";
 import { easeInOut, motion } from 'framer-motion';
 import ProgressBar from "./progressBar";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 export default function Page({ children }) {
     
@@ -15,6 +16,7 @@ export default function Page({ children }) {
                 transition={{ duration: 0.6, ease: easeInOut, delay: 0.2 }}>
                 {children}
                 <Footer />
+                <ScrollToTopButton/>
             </motion.main>
         </>
     )

@@ -29,8 +29,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-white shadow-lg flex">
-      <div className="container mx-auto flex items-center justify-between p-4">
+    <header className="bg-transparent shadow-lg flex">
+      <div className="container mx-auto flex items-center justify-between px-2 ">
         <button
           className="lg:hidden text-gray-800 focus:outline-none transition-transform duration-300 ease-in-out transform"
           onClick={toggleMenu}
@@ -55,7 +55,7 @@ const Header = () => {
             <Link href={'/'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
               >
                 HOME
               </div>
@@ -63,7 +63,7 @@ const Header = () => {
             <Link href={'/about'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
               >
                 ABOUT
               </div>
@@ -71,7 +71,7 @@ const Header = () => {
             <Link href={'/work'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
               >
                 WORK
               </div>
@@ -79,7 +79,7 @@ const Header = () => {
             <Link href={'/contact'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-2 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
               >
                 CONTACT
               </div>
@@ -88,7 +88,7 @@ const Header = () => {
         </nav>
 
         <div className="lg:flex-shrink-0">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
+          <Image src="/logo.png" alt="Logo" width={50} height={50} className='logo' />
         </div>
       </div>
     </header>
