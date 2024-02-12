@@ -1,20 +1,13 @@
 
-import {useRouter} from 'next/router';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const router = useRouter();
+  
   const handleScroll = () => {
-    let scrollTop=0;
-    
-    if (router.pathname='/'){
-      scrollTop = window.pageYOffset-90;}
-    else{
-      scrollTop = window.pageYOffset-3;
-    }
+  const scrollTop = window.pageYOffset-5;
 
     setIsVisible(scrollTop > 100);
   };
