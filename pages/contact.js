@@ -46,6 +46,10 @@ const Contact = () => {
       alert('Please enter a valid mobile number.');
       return;
     }
+    if (!description.trim()) {
+      alert('Please enter a description');
+      return;
+    }
 
     if (submissionCount < 3) {
       setButtonDisabled(true);
