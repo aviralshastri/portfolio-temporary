@@ -29,30 +29,43 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setButtonDisabled(true);
 
     const { name, mobile, email, description } = formData;
 
     if (!email || !/\S+@\S+\.\S+/.test(email)) {
       alert('Please enter a valid email address');
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
       return;
     }
 
     if (!name || /\d/.test(name)) {
       alert('Please enter a valid name.');
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
       return;
     }
 
     if (!mobile || /[a-zA-Z]/.test(mobile)) {
       alert('Please enter a valid mobile number.');
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
       return;
     }
     if (!description.trim()) {
       alert('Please enter a description');
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
       return;
     }
 
     if (submissionCount < 3) {
-      setButtonDisabled(true);
+      
 
       try {
         const emailText = `Name: ${name}, Mobile: ${mobile}, Email: ${email}, Description: ${description}`;
@@ -72,12 +85,17 @@ const Contact = () => {
         console.error('Error sending email: ', error);
         alert('Error sending email. Please try again later.');
       }
-
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
       setSubmissionCount(submissionCount + 1);
       setButtonDisabled(false);
       cookie.set('submissionCount', submissionCount + 1, { expires: 1 });
     } else {
       alert('Sorry, you have exceeded the submission limit for today. Please try again tomorrow.');
+      setTimeout(() => {
+        setButtonDisabled(false);
+      }, 600);
     }
   };
 
