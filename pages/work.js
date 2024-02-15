@@ -1,6 +1,7 @@
 import Page from "@/components/page";
 import Image from "next/image";
 
+
 const Work = () => {
   const projectsSoftwareDev = [
     {
@@ -41,8 +42,8 @@ const Work = () => {
               <h2 className="text-2xl font-bold mb-2 text-center">{project.title}</h2>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
               <div className="mt-4 text-center">
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-4 rounded-full inline-block">
-                  {project.buttonName}
+                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
+                {project.buttonName}
                 </a>
               </div>
             </div>
@@ -61,8 +62,8 @@ const Work = () => {
               <h1 className="text-2xl font-bold mb-2 text-center">{project.title}</h1>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
               <div className="mt-4 text-center">
-                <a href={project.instagramLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-4 rounded-full inline-block">
-                  {project.buttonName}
+              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
+                {project.buttonName}
                 </a>
               </div>
             </div>
