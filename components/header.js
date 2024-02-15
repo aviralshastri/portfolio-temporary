@@ -55,7 +55,7 @@ const Header = () => {
             <Link href={'/'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
               >
                 HOME
               </div>
@@ -63,7 +63,7 @@ const Header = () => {
             <Link href={'/about'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
               >
                 ABOUT
               </div>
@@ -71,7 +71,7 @@ const Header = () => {
             <Link href={'/work'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
               >
                 WORK
               </div>
@@ -79,7 +79,7 @@ const Header = () => {
             <Link href={'/contact'} passHref>
               <div
                 onClick={closeMenu}
-                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 hover:bg-gray-200'}
+                className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
               >
                 CONTACT
               </div>

@@ -4,7 +4,7 @@ import Page from '@/components/page';
 import Image from 'next/image';
 import '@/pages/global.css';
 
-const NotFound = () => {
+export default function NotFound(){
   return ( 
     <Page>
       <div className="flex flex-col items-center justify-center h-screen">
@@ -16,7 +16,7 @@ const NotFound = () => {
       </div>
       </div>
     </Page>
-  );
-};
+  )
+}
 
-export default NotFound;
+
