@@ -8,14 +8,14 @@ const Work = () => {
       title: "ChatBot using NLP",
       image: "/softwaredev/projectChatbot.jpg",
       description: "Crafted a Python chatbot that not only harnesses the power of NLTK for robust natural language processing but also incorporates Flet for a visually appealing graphical user interface. This chatbot stands out by injecting a touch of humor into its responses, making interactions not only informative but also delightful. Users can engage in witty conversations, creating a unique and enjoyable experience with the blend of NLP sophistication and a whimsical sense of humor.",
-      githubLink: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
+      Link: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
       buttonName:"View on GitHub"
     },
     {
       title: "Portfolio Website",
       image: "/softwaredev/projectPortfolio.png",
       description: "Introducing my comprehensive portfolio, meticulously crafted using the powerful Next.js framework, Tailwind CSS for a refined design system, and Framer Motion to infuse dynamic animations. This triad of technologies ensures not only a highly functional and responsive web application but also a visually stunning and interactive showcase of my skills and projects. The Next.js framework brings efficiency and speed to the forefront, Tailwind CSS facilitates a sleek and modern design aesthetic, while Framer Motion elevates the overall user experience with smooth and captivating animations. From seamless navigation to captivating transitions, my portfolio embodies the synergy of cutting-edge web development, offering visitors an immersive journey through my professional endeavors and capabilities.",
-      githubLink: "https://github.com/aviralshastri/portfolio-temporary.git",
+      Link: "https://github.com/aviralshastri/portfolio-temporary.git",
       buttonName:"View on GitHub"
     },
   ];
@@ -24,7 +24,7 @@ const Work = () => {
       title: "Video Editing Project",
       image: "/videoediting/EditingInternship.png",
       description: "As a video editing intern at Vaayu Robotics, I leveraged my skills in Premiere Pro and After Effects to produce high-quality and visually captivating content. Through the seamless integration of these powerful tools, I enhanced video narratives with polished effects, dynamic transitions, and professional-grade editing techniques. This internship not only honed my proficiency in industry-standard software but also allowed me to contribute creatively to the production of compelling and impactful video content for Vaayu Robotics.",
-      instagramLink: "/links",
+      Link: "/links",
       buttonName: "View Work",
     },
   ];
@@ -42,7 +42,7 @@ const Work = () => {
               <h2 className="text-2xl font-bold mb-2 text-center">{project.title}</h2>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
               <div className="mt-4 text-center">
-                <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
+                <a href={project.Link} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
                 {project.buttonName}
                 </a>
               </div>
@@ -62,7 +62,7 @@ const Work = () => {
               <h1 className="text-2xl font-bold mb-2 text-center">{project.title}</h1>
               <p className="text-sm text-gray-600 text-balance">{project.description}</p>
               <div className="mt-4 text-center">
-              <a href={project.githubLink} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
+              <a href={project.Link} target="_blank" rel="noopener noreferrer" className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block">
                 {project.buttonName}
                 </a>
               </div>
