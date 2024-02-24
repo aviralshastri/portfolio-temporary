@@ -9,8 +9,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    colors: {
-      'lavinder': '#fbf6fd'},
     container: {
       center: true,
       padding: "2rem",
@@ -20,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        lavinder: '#fbf6fd',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
