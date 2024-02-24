@@ -9,6 +9,8 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    colors: {
+      'lavinder': '#fbf6fd'},
     container: {
       center: true,
       padding: "2rem",
