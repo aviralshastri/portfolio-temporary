@@ -9,7 +9,7 @@ import ProgressBar from "@/components/progressBar";
 import Contact from "./contact";
 import About from "./about";
 import Work from "./work";
-
+/*main page */
 
 export default function Home() {
     return (
