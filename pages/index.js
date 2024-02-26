@@ -2,11 +2,22 @@ import Page from "@/components/page";
 import Image from "next/image";
 import me from '@/public/me.jpg';
 import Link from 'next/link';
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import ProgressBar from "@/components/progressBar";
+import Contact from "./contact";
+import About from "./about";
+import Work from "./work";
+
 
 export default function Home() {
     return (
+        <>
+        <Header />
+        <ProgressBar/>
         <Page>
-            <div className="flex flex-col items-center mb-8 mt-12">
+            <div className="flex flex-col items-center lg:mb-48 lg:mt-48">
                 <div className="bg-white rounded-lg p-4 md:flex md:items-center md:space-x-12">
                     <div className="mx-auto mb-4 md:mb-0 md:w-1/2">
                         <Image src={me} alt="My Image" width={500} height={500} className="me" />
@@ -36,5 +47,11 @@ export default function Home() {
                 </div>
             </div>
         </Page>
+        <About/>
+        <Work/>
+        <Contact/>
+        <Footer />
+        <ScrollToTopButton/>
+        </>
     );
 }

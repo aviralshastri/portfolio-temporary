@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { AnimatePresence, motion } from 'framer-motion';
-import './global.css';
+import './globals.css';
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();

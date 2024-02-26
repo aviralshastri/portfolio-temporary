@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Page from '@/components/page';
-import './global.css';
+import './globals.css';
 
 const ErrorPage = ({ statusCode }) => {
   return (

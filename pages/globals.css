@@ -14,7 +14,9 @@
 html {
   scrollbar-width: none;
   -ms-overflow-style: none;
+  scroll-behavior: smooth;
 }
+
 header {
   background-color: #333;
   padding: 10px;

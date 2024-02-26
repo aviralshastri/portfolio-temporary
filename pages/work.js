@@ -31,8 +31,8 @@ const Work = () => {
 
   return (
     <Page>
-      <h1 className="text-4xl font-bold mt-8 mb-8 text-center">Work</h1>
-
+      <div id="work" className="pt-16"></div>
+      <h1 className="text-6xl font-bold mt-8 mb-8 text-center">Work</h1>
       <div className="text-2xl font-bold mb-4 text-center">Software Development</div>
       <div className="flex flex-wrap justify-center workImg">
         {projectsSoftwareDev.map((project, index) => (

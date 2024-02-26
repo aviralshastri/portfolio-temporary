@@ -38,7 +38,7 @@ const word={
       initial='initial'
       animate='animate'
       >
-      <div className='font-bold about mb:text-center text-4xl mb-8'><h1>About Me</h1></div>
+      <div className='font-bold about mb:text-center text-4xl mb-8 text-white'><h1>About Me</h1></div>
 
         <div className={`${className} inline-block mb-2 homeText`}>
         {text}</div>

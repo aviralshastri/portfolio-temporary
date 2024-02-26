@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="bg-transparent shadow-lg flex">
+    <header className={`bg-white shadow-lg sticky top-0 ${isMenuOpen ? 'z-50' : ''}`}>
       <div className="container mx-auto flex items-center justify-between px-2 ">
         <button
           className="lg:hidden text-gray-800 focus:outline-none transition-transform duration-300 ease-in-out transform"
@@ -51,7 +51,7 @@ const Header = () => {
           }`}
         >
           <div className="lg:flex items-center">
-            <Link href={'/'} passHref>
+            <Link href={'#'} passHref>
               <div
                 onClick={closeMenu}
                 className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
@@ -59,7 +59,7 @@ const Header = () => {
                 HOME
               </div>
             </Link>
-            <Link href={'/about'} passHref>
+            <Link href={'#about'} passHref>
               <div
                 onClick={closeMenu}
                 className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
@@ -67,7 +67,7 @@ const Header = () => {
                 ABOUT
               </div>
             </Link>
-            <Link href={'/work'} passHref>
+            <Link href={'#work'} passHref>
               <div
                 onClick={closeMenu}
                 className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
@@ -75,7 +75,7 @@ const Header = () => {
                 WORK
               </div>
             </Link>
-            <Link href={'/contact'} passHref>
+            <Link href={'#contact'} passHref>
               <div
                 onClick={closeMenu}
                 className={'font-bold nav-item text-gray-800 cursor-pointer py-1 px-4 '}
@@ -87,7 +87,7 @@ const Header = () => {
         </nav>
 
         <div className="lg:flex-shrink-0">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} className='logo' />
+          <Image src="/logo.png" alt="Logo" width={70} height={70} className='logo' />
         </div>
       </div>
     </header>

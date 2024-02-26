@@ -2,7 +2,7 @@
 import React from 'react';
 import Page from '@/components/page';
 import Image from 'next/image';
-import '@/pages/global.css';
+import '@/pages/globals.css';
 
 export default function NotFound(){
   return ( 

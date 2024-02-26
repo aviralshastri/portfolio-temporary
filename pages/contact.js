@@ -85,11 +85,14 @@ const Contact = () => {
 
   return (
     <Page>
-      <div className="max-w-md mx-auto bg-white p-6 mt-8 rounded-md mb-8 shadow-2xl">
-        <h1 className="text-4xl font-bold mb-4 justify-center items-center text-center">Contact</h1>
+      <div id="contact" className='bg-black pt-24 pb-20'>
+
+      <div className="max-w-md mx-auto  p-6 mt-8 bg-black rounded-md mb-8 shadow-2xl">
+      <h1 className="text-4xl font-bold mb-12 text-white justify-centeritems-center text-center">Contact</h1>
+        
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="name" className="block text-white text-sm font-bold mb-2">
               Name
             </label>
             <input
@@ -104,7 +107,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="mobile" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="mobile" className="block text-white text-sm font-bold mb-2">
               Mobile Number
             </label>
             <input
@@ -119,7 +122,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="email" className="block text-white text-sm font-bold mb-2">
               Email
             </label>
             <input
@@ -134,7 +137,7 @@ const Contact = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="description" className="block text-gray-700 text-sm font-bold mb-2">
+            <label htmlFor="description" className="block text-white text-sm font-bold mb-2">
               Description
             </label>
             <textarea
@@ -155,6 +158,7 @@ const Contact = () => {
             Submit
           </button>
         </form>
+      </div>
       </div>
     </Page>
   );
