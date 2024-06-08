@@ -30,7 +30,6 @@ export default function Page({ children }) {
             >
                 {children}
             </motion.main>
-            <Footer />
             <ScrollToTopButton />
         </>
     );
