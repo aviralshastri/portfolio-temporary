@@ -22,7 +22,6 @@ export default function Page({ children }) {
                 <meta name="twitter:description" content="Welcome to the portfolio of Aviral Shastri. Discover projects, skills, and contact information." />
                 <meta name="twitter:image" content="https://aviral-shastri-portfolio.vercel.app/me.jpg" />
             </Head>
-            <Header />
             <motion.main 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
