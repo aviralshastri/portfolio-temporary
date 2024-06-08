@@ -1,7 +1,7 @@
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header";
 import { easeInOut, motion } from 'framer-motion';
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./progressBar";
 import ScrollToTopButton from "./ScrollToTopButton";
 import Head from 'next/head';
 
