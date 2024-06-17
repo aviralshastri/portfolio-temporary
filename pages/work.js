@@ -9,16 +9,37 @@ const Work = () => {
       image: "/softwaredev/projectChatbot.jpg",
       description: "Crafted a Python chatbot that not only harnesses the power of NLTK for robust natural language processing but also incorporates Flet for a visually appealing graphical user interface. This chatbot stands out by injecting a touch of humor into its responses, making interactions not only informative but also delightful. Users can engage in witty conversations, creating a unique and enjoyable experience with the blend of NLP sophistication and a whimsical sense of humor.",
       Link: "https://github.com/aviralshastri/Basic-Chatbot-with-NLTK.git",
-      buttonName:"View on GitHub"
+      buttonName: "View on GitHub",
+      liveDemoLink: "",
     },
     {
       title: "Portfolio Website",
       image: "/softwaredev/projectPortfolio.png",
       description: "Introducing my comprehensive portfolio, meticulously crafted using the powerful Next.js framework, Tailwind CSS for a refined design system, and Framer Motion to infuse dynamic animations. This triad of technologies ensures not only a highly functional and responsive web application but also a visually stunning and interactive showcase of my skills and projects. The Next.js framework brings efficiency and speed to the forefront, Tailwind CSS facilitates a sleek and modern design aesthetic, while Framer Motion elevates the overall user experience with smooth and captivating animations. From seamless navigation to captivating transitions, my portfolio embodies the synergy of cutting-edge web development, offering visitors an immersive journey through my professional endeavors and capabilities.",
       Link: "https://github.com/aviralshastri/portfolio-temporary.git",
-      buttonName:"View on GitHub"
+      buttonName: "View on GitHub",
+      liveDemoLink: "https://aviral-shastri-portfolio.vercel.app/",
+    },
+    {
+      title: "Secure Password Generator",
+      image: "/softwaredev/projectPasswordGenrator.png",
+      description:
+        "Built a secure password generator using Next.js and Tailwind CSS. This application empowers users to generate strong and unique passwords with customizable settings, ensuring robust protection against cyber threats. Tailwind CSS provides a streamlined approach to crafting a user-friendly interface, while Next.js guarantees a performant and efficient user experience.",
+      Link: "https://github.com/aviralshastri/password-generator",
+      buttonName: "View on GitHub",
+      liveDemoLink: "https://password-generator-lac-five.vercel.app/",
+    },
+    {
+      title: "Interactive Dictionary App",
+      image: "/softwaredev/projectDictionary.png",
+      description:
+        "Developed an interactive dictionary app using Next.js, Tailwind CSS, and a free dictionary API. This comprehensive tool allows users to search for word definitions, access phonetic pronunciations, and even listen to audio samples of the pronunciations. The combination of Next.js and Tailwind CSS fosters a visually appealing and responsive user interface, while the free dictionary API grants access to a vast database of words and their definitions.",
+      Link: "https://github.com/aviralshastri/Dictionary-app-using-nextjs",
+      buttonName: "View on GitHub",
+      liveDemoLink: "https://dictionary-alpha-liard.vercel.app/",
     },
   ];
+  
   const projectsVideoEditing = [
     {
       title: "Video Editing Project",
@@ -46,6 +67,11 @@ const Work = () => {
                 {project.buttonName}
                 </a>
               </div>
+              {project.liveDemoLink && (<div className="mt-4 text-center">
+                <a href={project.liveDemoLink} target="_blank" rel="noopener noreferrer" className="bg-white hover:bg-zinc-800 text-zinc-900 border border-solid border-zinc-900 font-bold py-2 px-8 rounded-full inline-block">
+                  Live Demo
+                </a>
+              </div>)}
             </div>
           </div>
         ))}
