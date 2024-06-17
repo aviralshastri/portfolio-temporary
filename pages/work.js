@@ -80,17 +80,18 @@ const Work = () => {
               <p className="text-sm text-gray-600 text-balance">
                 {project.description}
               </p>
-              <div className="flex justify-center mt-4">
-                {" "}
+              <div className="mt-4 text-center">
                 <a
                   href={project.Link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block mr-4"
+                  className="bg-zinc-900 hover:bg-zinc-800 text-white font-bold py-2 px-8 rounded-full inline-block"
                 >
                   {project.buttonName}
                 </a>
-                {project.liveDemoLink && (
+              </div>
+              {project.liveDemoLink && (
+                <div className="mt-4 text-center">
                   <a
                     href={project.liveDemoLink}
                     target="_blank"
@@ -99,8 +100,8 @@ const Work = () => {
                   >
                     Live Demo
                   </a>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
         ))}
